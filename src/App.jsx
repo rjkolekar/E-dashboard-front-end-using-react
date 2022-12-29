@@ -4,21 +4,18 @@ import Products from './Components/Products'
 import AddProduct from './Components/AddProduct'
 import Profile from './Components/Profile'
 import UpdateProduct from './Components/UpdateProduct'
-import Logout from './Components/Logout'
-
-import Register from './Components/Register'
-
-import Navbar from './Navbar'
 import SignUp from './Components/SignUp'
-// import Sidebar from './Components/Sidebar'
 import PrivateComponent from './Components/PrivateComponent'
-// import Sidebar from './Components/Sidebar'
+import Sidebar from './Sidebar'
+import TempComponent from './Components/TempComponent'
+import Login from './Components/Login'
+
 
 function App() {
   return (
     <>
     <Router>
-     <Navbar />
+     <Sidebar />
         <Routes>
 
           <Route element= {<PrivateComponent />} >
@@ -26,11 +23,13 @@ function App() {
           <Route path='/add'element={<AddProduct />}></Route>
           <Route path='/update'element={<UpdateProduct />}></Route>
           <Route path='/profile' element={<Profile />}></Route>
-          <Route path='/logout' element={<Logout />}></Route>
           </Route>
+
           <Route path='/signup' element={<SignUp />}></Route>
-          <Route path='/register' element={<Register />}></Route>
-          {/* <Route path='/sidebar' element={<Sidebar />}></Route> */}
+          <Route path='/login' element={<Login />}></Route>
+
+          <Route path='/temp' element={<TempComponent />}></Route>
+          
 
         </Routes>
     </Router>

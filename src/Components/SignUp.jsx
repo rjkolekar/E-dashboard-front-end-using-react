@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -27,37 +27,31 @@ const SignUp = () => {
     result = await result.json();
     console.log(result);
     localStorage.setItem("user", JSON.stringify(result));
-    //  if(result)
-    //  {
-    //   navigate('/')
-    //  }
-    window.location.replace("/");
-    
-   alert('Your account has been registered successfully')
-    
+    if (result) {
+      navigate("/");
+    }
+    // window.location.replace("/");
+
+    alert("Your account has been registered successfully");
   };
 
   return (
     <>
-      <div className="ml-[270px] fixed ">
+      <div className="ml-[220px] fixed bg-slate-300 w-full h-full">
         <div>
-          <h1 className="text-4xl mt-16 ml-[230px]">
-            User Registration
-          </h1>
+          <h1 className="text-4xl mt-16 ml-[230px]">User Registration</h1>
         </div>
 
-
-        <div className="w-full max-w-xs ml-[200px] border border-slate-500 mt-8 p-10 rounded-3xl">
+        <div className="w-full max-w-xs ml-[200px] border border-red-400 mt-8 p-10 rounded-3xl">
           <h2 className="font-bold text-xl ml-8">Please SignUp </h2>
           <br />
-         
 
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Enter Your Name"
-            className="bg-slate-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            className="bg-slate-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-400"
           />
 
           <br />
@@ -67,7 +61,7 @@ const SignUp = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter Your Email"
-            className="bg-slate-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            className="bg-slate-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-400"
           />
           <br />
           <br />
@@ -76,13 +70,13 @@ const SignUp = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Enter Your Password"
-            className="bg-slate-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            className="bg-slate-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-400"
           />
           <br />
 
           <button
             onClick={collectData}
-            className="rounded-full bg-slate-800 px-3 py-1 mt-4 ml-16 text-white"
+            className="rounded-lg hover:bg-red-400 hover:text-violet-900 bg-red-900 font-semibold px-3 py-1 mt-4 ml-16 text-white"
           >
             SignUp
           </button>
