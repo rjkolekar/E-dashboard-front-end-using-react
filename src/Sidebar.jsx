@@ -11,34 +11,36 @@ const Navbar = () => {
 
   return (
     <>
-      <div className=" bg-red-900 w-[270px] h-screen fixed">
-        <div className="py-4 px-4 text-white">
-          <h1 className="text-2xl font-bold  hover:text-violet-900 text-white">
+      <div className=" bg-emerald-100 w-[270px] h-screen text-black fixed">
+        <div className="py-4 px-4 text-black">
+          <div>
+          <h1 className="text-2xl font-bold  hover:text-violet-900 text-black">
             E-Dashboard
           </h1>
+          </div>
         </div>
         
         {
           auth ? 
-          <ul className="py-4 text-white">
-          <li className="block px-4 py-2 font-semibold hover:bg-red-400 hover:text-violet-900 rounded-lg">
+          <ul className="py-4 text-black">
+          <li className="block px-4 py-2 font-semibold hover:bg-green-200 hover:text-violet-900 rounded-lg ">
             <Link to="/">Products </Link>
           </li>
-          <li className="block px-4 py-2 font-semibold text-white hover:bg-red-400 hover:text-violet-900 rounded-lg">
+          <li className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg">
             <Link to="/add">Add Products </Link>
           </li>
-          <li className="block px-4 py-2 font-semibold text-white hover:bg-red-400 hover:text-violet-900 rounded-lg">
+          <li className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg">
             <Link to="/update">Update Product </Link>
           </li>
 
-          <li className="block px-4 py-2 font-semibold text-white hover:bg-red-400 hover:text-violet-900 rounded-lg">
+          <li className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg">
             <Link to="/profile">Profile </Link>
           </li>
         
         <Link
             onClick={logout}
             to="signup"
-            className="block px-4 py-2 font-semibold text-white hover:bg-red-400 hover:text-violet-900 rounded-lg"
+            className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg"
           >
             Logout({JSON.parse(auth).name})
           </Link>
@@ -46,13 +48,13 @@ const Navbar = () => {
         : <ul>
         <Link
               to="/login"
-              className="block px-4 py-2 font-semibold text-white hover:bg-red-400 hover:text-violet-900 rounded-lg"
+              className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg"
             >
               Login
             </Link>
             <Link
               to="/signup"
-              className="block px-4 py-2 font-semibold text-white hover:bg-red-400 hover:text-violet-900 rounded-lg"
+              className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg"
             >
               SignUp
             </Link>

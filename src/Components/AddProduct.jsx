@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+
 const AddProduct = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -7,8 +8,11 @@ const AddProduct = () => {
   const [brand, setBname] = useState("");
   const [file, setFile] = useState("");
   const [error, setError] = useState(false);
+  
 
-  const loadProduct = async () => {
+  
+
+  const addProduct = async () => {
     // console.log(name, price, category, brand, file);
 
     if (!name || !price || !category || !brand || !file) {
@@ -27,17 +31,20 @@ const AddProduct = () => {
     result = await result.json();
     console.log(result);
     alert("Product Added Successfully");
+    
+  
   };
   return (
-    <div className="ml-[550px] items-center justify-center mt-4 fixed text-center ">
-      <h2 className="text-4xl mt-6">You Can Add Product Here</h2>
-      <div className="mt-6">
+    <div className="ml-[320px] items-center justify-center fixed  ">
+      <h2 className="text-4xl mt-6">Add Product</h2>
+      <div className="mt-2 border border-slate-600 p-12 rounded-lg">
         <input
+          
           type="text"
           placeholder="Enter Product Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className=" bg-slate-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4
+          className=" bg-emerald-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4
           text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-400"
         />
         <br />
@@ -48,11 +55,12 @@ const AddProduct = () => {
         )}
         <br />
         <input
+       
           type="text"
           placeholder="Enter Product Price"
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          className=" bg-slate-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4
+          className=" bg-emerald-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4
            text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-400"
         />
        <br />
@@ -63,11 +71,12 @@ const AddProduct = () => {
         )}
          <br />
         <input
+       
           type="text"
           placeholder="Product Brand Name"
           value={brand}
           onChange={(e) => setBname(e.target.value)}
-          className=" bg-slate-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4
+          className=" bg-emerald-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4
            text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-400"
         />
         <br />
@@ -78,11 +87,12 @@ const AddProduct = () => {
         )}
          <br />
         <input
+       
           type="text"
           placeholder="Enter Category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className=" bg-slate-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4
+          className=" bg-emerald-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4
            text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-400"
         />
         <br />
@@ -93,6 +103,7 @@ const AddProduct = () => {
         )}
         <br />
         <input
+        
           type="file"
           value={file}
           onChange={(e) => setFile(e.target.value)}
@@ -105,10 +116,10 @@ const AddProduct = () => {
         )}
         <br />
         <button
-          onClick={loadProduct}
-          className="bg-red-800 px-1 py-1 rounded-lg text-white "
+          onClick={addProduct}
+          className="bg-emerald-500 hover:text-white px-3 py-1 rounded-lg  text-black "
         >
-          Ok Sumbit
+          Ok Add
         </button>
       </div>
     </div>
