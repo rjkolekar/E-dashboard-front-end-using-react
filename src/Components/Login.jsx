@@ -35,7 +35,7 @@ const Login = () => {
     } else {
       alert("Please Enter Correct Details");
     }
-    // console.log(result)
+    console.log(result)
   };
 
   return (
