@@ -40,17 +40,28 @@ const Login = () => {
 
   return (
     <>
-      <div className="ml-[220px] flex items-center justify-items-start ">
-        <div className=" items-center justify-arround ml-12 mr-0 h-[260px] w-[480px]">
+      <div className="ml-[220px] flex items-center justify-start">
+        <div className="ml-16 mr-0 h-[260px] w-[450px]">
           <img className="" src="./1.webp" alt="" />
            
             </div>
         <div className="items-center justify-center ">
+<<<<<<< auth
           <div className="mt-16 ml-[230px]">
             <h1 className="text-4xl ">Login </h1>
           </div>
           <div className="w-full max-w-xs ml-[200px] border border-black mt-8 p-10 rounded-3xl">
             <h2 className="font-bold text-xl ml-8">Please Login </h2>
+=======
+          <div className="mt-10 ml-[230px]">
+            <p className="text-2xl">Welcome to E-Dashborad</p>
+          </div>
+          <div className="w-full max-w-xs ml-[200px] border border-black mt-8 p-16 rounded-3xl">
+            <h2 className="font-bold text-xl ml-8 text-emerald-700 ">
+              Please Login{" "}
+            </h2>
+            
+>>>>>>> local
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -59,6 +70,7 @@ const Login = () => {
               className=" bg-emerald-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4
           text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-400 mt-10"
             />
+<<<<<<< auth
              {error && !email && (
                 <div className="text-red-600 text-left">
                   <span>Email field is required</span>
@@ -66,6 +78,15 @@ const Login = () => {
               )}
             <br />
             <br />
+=======
+            {error && !email && (
+              <div className="text-red-600 text-left">
+                <span>Email field is required</span>
+              </div>
+            )}
+            
+        
+>>>>>>> local
            
 
             <input
@@ -77,6 +98,7 @@ const Login = () => {
               className=" bg-emerald-100 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4
           text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-red-400"
             />
+<<<<<<< auth
              {error && !email && (
                 <div className="text-red-600 text-left">
                   <span>Password field is required </span>
@@ -84,6 +106,15 @@ const Login = () => {
               )}
             <br />
             <br />
+=======
+            {error && !email && (
+              <div className="text-red-600 text-left">
+                <span>Password field is required </span>
+              </div>
+            )}
+           
+            
+>>>>>>> local
 
             <button
               onClick={login}

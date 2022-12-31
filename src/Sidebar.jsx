@@ -23,9 +23,10 @@ const Navbar = () => {
         {
           auth ? 
           <ul className="py-4 text-black">
-          <li className="block px-4 py-2 font-semibold hover:bg-green-200 hover:text-violet-900 rounded-lg ">
+          <li className="block px-4 py-2 font-semibold hover:bg-green-200 hover:text-white rounded-lg ">
             <Link to="/">Products </Link>
           </li>
+<<<<<<< auth
           <li className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg">
             <Link to="/add">Add Products </Link>
           </li>
@@ -34,13 +35,27 @@ const Navbar = () => {
           </li>
 
           <li className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg">
+=======
+          <li className="block px-4 py-2 font-semibold text-black hover:bg-emerald-500 hover:text-white rounded-lg">
+            <Link to="/add">Add Products </Link>
+          </li>
+          <li className="block px-4 py-2 font-semibold text-black hover:bg-emerald-500 hover:text-white rounded-lg">
+            <Link to="/update">Update Product </Link>
+          </li>
+
+          <li className="block px-4 py-2 font-semibold text-black hover:bg-emerald-500 hover:text-white rounded-lg">
+>>>>>>> local
             <Link to="/profile">Profile </Link>
           </li>
         
         <Link
             onClick={logout}
             to="signup"
+<<<<<<< auth
             className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg"
+=======
+            className="block px-4 py-2 font-semibold text-black hover:bg-emerald-500 hover:text-white rounded-lg"
+>>>>>>> local
           >
             Logout({JSON.parse(auth).name})
           </Link>
@@ -48,13 +63,21 @@ const Navbar = () => {
         : <ul>
         <Link
               to="/login"
+<<<<<<< auth
               className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg"
+=======
+              className="block px-4 py-2 font-semibold text-black hover:bg-emerald-500 hover:text-white rounded-lg"
+>>>>>>> local
             >
               Login
             </Link>
             <Link
               to="/signup"
+<<<<<<< auth
               className="block px-4 py-2 font-semibold text-black hover:bg-green-200 hover:text-violet-900 rounded-lg"
+=======
+              className="   block px-4 py-2 font-semibold text-black hover:bg-emerald-500 hover:text-white rounded-lg"
+>>>>>>> local
             >
               SignUp
             </Link>
